@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 // Asumsikan ItemCard berada di widgets/product_card.dart (sudah ada di import)
-import 'package:football_shop/widgets/product_card.dart'; 
+import 'package:thecorner/widgets/product_card.dart'; 
 // Asumsikan LeftDrawer berada di file terpisah dan perlu diimpor
-import 'package:football_shop/widgets/left_drawer.dart'; // <--- Import LeftDrawer
+import 'package:thecorner/widgets/left_drawer.dart'; // <--- Import LeftDrawer
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({super.key});
@@ -12,9 +12,9 @@ class MyHomePage extends StatelessWidget {
   final String kelas = "B";
 
   final List<ItemHomepage> items = [
-    ItemHomepage("All Products", Icons.shopify),
-    ItemHomepage("My Products", Icons.my_library_add_outlined),
     ItemHomepage("Create Product", Icons.my_library_add_outlined),
+    ItemHomepage("My Product", Icons.inventory),
+    ItemHomepage("See Football Products", Icons.visibility)
   ];
 
   @override

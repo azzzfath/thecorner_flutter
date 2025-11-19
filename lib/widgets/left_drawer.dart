@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:thecorner/screens/login.dart';
 
-import 'package:football_shop/screens/menu.dart';
-import 'package:football_shop/screens/productlist_form.dart';
+import 'package:thecorner/screens/menu.dart';
+import 'package:thecorner/screens/productlist_form.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -34,34 +35,53 @@ class LeftDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-  leading: const Icon(Icons.home_outlined),
-  title: const Text('Home'),
-  // Bagian redirection ke MyHomePage
-  onTap: () {
-    Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => MyHomePage(),
-        ));
-  },
-),
-ListTile(
-  leading: const Icon(Icons.post_add),
-  title: const Text('Add News'),
-  // Bagian redirection ke NewsFormPage
-  onTap: () {
-    /*
-    TODO: Buatlah routing ke NewsFormPage di sini,
-    setelah halaman NewsFormPage sudah dibuat.
-    */
+            leading: const Icon(Icons.login),
+            title: const Text('Logout'),
+            // Bagian redirection ke NewsFormPage
+            onTap: () {
+              /*
+              TODO: Buatlah routing ke NewsFormPage di sini,
+              setelah halaman NewsFormPage sudah dibuat.
+              */
 
-        Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => ProductFormPage(),
-        ));
-  },
-),
+                  Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LoginPage(),
+                  ));
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.home_outlined),
+            title: const Text('Home'),
+            // Bagian redirection ke MyHomePage
+            onTap: () {
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MyHomePage(),
+                  ));
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.post_add),
+            title: const Text('Create Product'),
+            // Bagian redirection ke NewsFormPage
+            onTap: () {
+              /*
+              TODO: Buatlah routing ke NewsFormPage di sini,
+              setelah halaman NewsFormPage sudah dibuat.
+              */
+
+                  Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ProductFormPage(),
+                  ));
+            },
+          ),
+
+
         ],
       ),
     );
